@@ -1,0 +1,17 @@
+{
+  "name": "my-express-proxy",
+  "build": {
+    "builder": "nixpacks"
+  },
+  "deploy": {
+    "start": "node index.js"
+  },
+  "env": {
+    "PORT": {
+      "required": true
+    },
+    "TARGET_URL": {
+      "required": true
+    }
+  }
+}
