@@ -9,7 +9,7 @@ const apiProxy = createProxyMiddleware({
     changeOrigin: true
 });
 
-app.use('/api/v1', apiProxy);
+app.use('/', apiProxy);
 
 app.get('/', (req, res) => {
     res.send('Proxy server is running');
