@@ -8,7 +8,7 @@ const apiProxy = createProxyMiddleware({
     target: process.env.TARGET_URL,
     changeOrigin: true,
     pathRewrite: {
-        '^/api/v1': '/api/v1',
+        '^/api/v1': '',
     },
 });
 
