@@ -6,10 +6,7 @@ const app = express();
 
 const apiProxy = createProxyMiddleware({
     target: process.env.TARGET_URL,
-    changeOrigin: true,
-    pathRewrite: {
-        '^/api/v1': '',
-    },
+    changeOrigin: true
 });
 
 app.use('/api/v1', apiProxy);
