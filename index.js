@@ -8,11 +8,11 @@ const apiProxy = createProxyMiddleware({
     target: process.env.TARGET_URL,
     changeOrigin: true,
     pathRewrite: {
-        '^/api': '/api/v1',
+        '^/api/v1': '/api/v1',
     },
 });
 
-app.use('/api', apiProxy);
+app.use('/api/v1', apiProxy);
 
 app.get('/', (req, res) => {
     res.send('Proxy server is running');
